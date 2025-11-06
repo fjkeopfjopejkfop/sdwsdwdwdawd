@@ -1,0 +1,112 @@
+name: "Genetic Algorithm"
+description: "Evolutionary optimization with population, crossover, and mutation"
+
+# Genetic algorithm parameters
+parameters:
+  # Population size
+  population_size: 50
+
+  # Crossover probability
+  crossover_rate: 0.8
+
+  # Mutation probability
+  mutation_rate: 0.1
+
+  # Number of elite individuals to keep
+  elite_size: 5
+
+  # Maximum genome length
+  max_genome_length: 20
+
+# Selection methods
+selection:
+  # Selection method: "tournament", "roulette_wheel", "rank"
+  method: "tournament"
+
+  # Tournament size for tournament selection
+  tournament_size: 3
+
+# Crossover configuration
+crossover:
+  # Crossover method: "single_point", "two_point", "uniform"
+  method: "single_point"
+
+  # Maximum crossover points (for multi-point crossover)
+  max_points: 3
+
+# Mutation configuration
+mutation:
+  # Mutation method: "point", "insertion", "deletion", "swap"
+  method: "point"
+
+  # Mutation strength (affects mutation probability)
+  strength: 0.5
+
+# Diversity management
+diversity:
+  # Enable diversity maintenance
+  enabled: true
+
+  # Diversity threshold for triggering diversity mechanisms
+  threshold: 0.1
+
+# Genome configuration
+genome:
+  # Initial genome length range
+  min_initial_length: 1
+  max_initial_length: 10
+
+  # Gene mutation parameters
+  gene_mutation_rate: 0.1
+
+  # Structural mutation parameters
+  structural_mutation_rate: 0.05
+
+# Reproduction
+reproduction:
+  # Number of offspring generated per generation
+  offspring_count: 50
+
+  # Parent selection pressure
+  selection_pressure: 1.0
+
+  # Inheritance rate (how much of parent genome is preserved)
+  inheritance_rate: 0.8
+
+# Convergence
+convergence:
+  # Maximum generations without improvement
+  max_stagnant_generations: 50
+
+  # Fitness improvement threshold
+  improvement_threshold: 0.001
+
+  # Minimum diversity threshold
+  min_diversity: 0.01
+
+# Performance
+performance:
+  # Parallel evaluation
+  parallel_evaluation: false
+
+  # Number of workers for parallel evaluation
+  num_workers: 4
+
+  # Caching of fitness evaluations
+  cache_fitness: true
+
+# Adaptation
+adaptation:
+  # Adaptive mutation rate
+  adaptive_mutation: false
+
+  # Adaptive crossover rate
+  adaptive_crossover: false
+
+  # Mutation rate adaptation bounds
+  min_mutation_rate: 0.01
+  max_mutation_rate: 0.3
+
+  # Crossover rate adaptation bounds
+  min_crossover_rate: 0.5
+  max_crossover_rate: 0.9
